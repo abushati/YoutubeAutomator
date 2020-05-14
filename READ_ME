@@ -1,0 +1,5 @@
+30 * * * * cd /Users/arvid/GoProjects && /Users/arvid/GoProjects/Runners/NotifierRunner/NotifierRunner
+
+This is the cron to run notifier. Use */3 etc to run every 3 mintues.
+You also have to be in GoProjects dir
+
