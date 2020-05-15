@@ -3,3 +3,5 @@
 This is the cron to run notifier. Use */3 etc to run every 3 mintues.
 You also have to be in GoProjects dir
 
+Follow this link to set up the Gmail SMTP 
+https://stackoverflow.com/questions/34433459/gmail-returns-534-5-7-14-please-log-in-via-your-web-browser 

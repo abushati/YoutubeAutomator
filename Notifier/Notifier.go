@@ -22,7 +22,10 @@ type videoTemplate struct {
 
 func getCreds() (string,string)  {
 	var cred creds
-	file, _ := ioutil.ReadFile("PlayListSync/creds")
+	file, err := ioutil.ReadFile("PlayListSync/creds")
+	fmt.Println("theeeeraldfjalfjalsjf error ")
+	fmt.Println(err)
+
 	json.Unmarshal(file,&cred)
 	fmt.Println(cred.Password)
 	return cred.Username, cred.Password
@@ -39,11 +42,11 @@ func sendEmail(body string)  {
 		"Subject: Hello there\r\n" +
 		mime + "\r\n\r\n" +
 		body
-
+	fmt.Println("About to send")
 	err := smtp.SendMail("smtp.gmail.com:587",
 		smtp.PlainAuth("", from, pass, "smtp.gmail.com"),
 		from, []string{to}, []byte(msg))
-
+	fmt.Println(err)
 	if err != nil {
 		fmt.Printf("smtp error: %s", err)
 		return
@@ -65,7 +68,9 @@ func generateEmail(videos []PlayListSync.Video) string {
 
 	for _,videolink := range emailBody{
 		videoId := videolink.URL
-		url:= "http://localhost:8080/video/"+videoId
+
+		url:= "http://157.245.13.186:8081/video/"+videoId
+		//url:= "http://localhost:8080/video/"+videoId
 		body = body+
 			"<img src=\""+videolink.LinktoThumb + "\">\n" +
 			"<div>"+url+"</div>"
@@ -85,12 +90,17 @@ func getPlayList() []PlayListSync.Playlist{
 func getVideosToNotify(playlist PlayListSync.Playlist) []PlayListSync.Video{
 	var returnVidos []PlayListSync.Video
 	for _,video := range playlist.Videos{
+		fmt.Println(video)
 		notificationData := video.NotificationData
+		fmt.Println(notificationData.NoMoreNotification)
+		fmt.Println(notificationData.NotificationSentforDay)
+
 		if notificationData.NoMoreNotification == false && notificationData.NotificationSentforDay == false{
 			returnVidos = append(returnVidos,video)
 
 		}
 	}
+	fmt.Println(returnVidos)
 	return returnVidos
 }
 
@@ -119,12 +129,19 @@ func updatedNotificationData(playlist string,videosToNotify []PlayListSync.Video
 func NN() {
 	PlayListSync.RunSync()
 	allPlayList := getPlayList()
+	fmt.Println("dooooodDDDDDOOOOOOO")
+
 	for _,playlist := range allPlayList{
+		fmt.Println(playlist)
 		if playlist.Title == "Watch Later"{
+			fmt.Println("hhhheerrre")
 			videosToNotify := getVideosToNotify(playlist)
+			fmt.Println(videosToNotify)
 			if len(videosToNotify) > 0{
+				fmt.Print("hhadafsdf")
 				updatedNotificationData(playlist.PlaylistID,videosToNotify)
 				body := generateEmail(videosToNotify)
+				fmt.Println("body")
 				sendEmail(body)
 			}
 		}

@@ -1,0 +1,109 @@
+{
+    "PlaylistsInfo": [
+        {
+            "PlaylistsTitle": "Watch Later",
+            "PlaylistsId": "PLhbEyJUgbdml2wBZMPqWz75LEoQfS9qoK",
+            "All_Videos": [
+                {
+                    "Id": "5tA-aqhz_Ig",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/5tA-aqhz_Ig/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": false,
+                        "NoMoreNotification": true
+                    }
+                },
+                {
+                    "Id": "UVq_u2r2tow",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/UVq_u2r2tow/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": true,
+                        "NoMoreNotification": false
+                    }
+                },
+                {
+                    "Id": "ZSbxbdpoogg",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/ZSbxbdpoogg/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": true,
+                        "NoMoreNotification": false
+                    }
+                },
+                {
+                    "Id": "CyL8ZtwqLPU",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/CyL8ZtwqLPU/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": true,
+                        "NoMoreNotification": false
+                    }
+                },
+                {
+                    "Id": "LSr2KWqjx3w",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/LSr2KWqjx3w/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": true,
+                        "NoMoreNotification": false
+                    }
+                },
+                {
+                    "Id": "MWr2ZQYSwDY",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/MWr2ZQYSwDY/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": true,
+                        "NoMoreNotification": false
+                    }
+                }
+            ]
+        },
+        {
+            "PlaylistsTitle": "music8",
+            "PlaylistsId": "PLhbEyJUgbdmn2EMMKPlmqSKYhKyVE-Zme",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "music 7",
+            "PlaylistsId": "PLhbEyJUgbdmmnQpKEDMBDzpV8nz9eTbr5",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Music",
+            "PlaylistsId": "PLhbEyJUgbdmn1OA2YFa2_j27AnWuA4fPP",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Music 6",
+            "PlaylistsId": "PLhbEyJUgbdmngZlYJB_kvYgTIE2bXVaUd",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "music 5",
+            "PlaylistsId": "PLhbEyJUgbdmkpOfv6wnb4V9PZyHzLyC2M",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Music4",
+            "PlaylistsId": "PLhbEyJUgbdmnEDMpvqp2X7OvxCdF4nxpP",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Music3",
+            "PlaylistsId": "PLhbEyJUgbdmmkk1uEs5_dacOp7YiHJ1rP",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Music2",
+            "PlaylistsId": "PLhbEyJUgbdmkrvHvGkysqTuD2bmxOTvTV",
+            "All_Videos": null
+        },
+        {
+            "PlaylistsTitle": "Favorites",
+            "PlaylistsId": "FLgVO6ZVj_lzR_D0HCwHV8xQ",
+            "All_Videos": null
+        }
+    ]
+}

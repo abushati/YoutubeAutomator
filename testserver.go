@@ -2,7 +2,6 @@ package main
 
 import (
 	"./PlayListSync"
-	//"./Notifier"
 	"fmt"
 	"log"
 	"net/http"
@@ -26,7 +25,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	//Notifier.NN()
+	//Portal 8081/tcp is allowed in ufw 
 	http.HandleFunc("/video/", handler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8081", nil))
 }
