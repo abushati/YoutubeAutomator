@@ -5,3 +5,5 @@ You also have to be in GoProjects dir
 
 Follow this link to set up the Gmail SMTP 
 https://stackoverflow.com/questions/34433459/gmail-returns-534-5-7-14-please-log-in-via-your-web-browser 
+
+to auth , copy link and once at 400 page copy token in the url or through inceptor code: 4/zwHJa_jIOqxI8xoQ95C0errAzwvl_cTdMBS9e9qeTEwj8BVEzbKTUq92KbXWVu8LwIPX35dMWECFZS-8CMMJnKo
