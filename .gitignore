@@ -1,4 +1,4 @@
 *.credentials
 *API_Token.txt
 creds
-*client_secret.json
+client_secret.json

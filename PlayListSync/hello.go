@@ -15,6 +15,7 @@ var client *youtube.Service = Youtube.YoutubeClient()
 type Playlists struct {
 	Playlists []Playlist `json:"PlaylistsInfo"`
 }
+
 type Playlist struct {
 	Title      string  `json:"PlaylistsTitle"`
 	PlaylistID string  `json:"PlaylistsId"`
@@ -40,6 +41,19 @@ type playListItemCall struct {
 	part      string
 	id        string
 	nextToken string
+}
+
+func (cfg Playlists) ContainsVideo(videoID string, playlistTitle string) bool {
+	for _, i2 := range cfg.Playlists {
+		if i2.Title == playlistTitle{
+			for _, i4 := range i2.Videos {
+				if i4.Id == videoID{
+					return true
+				}
+			}
+		}
+	}
+	return false
 }
 
 func callPlayListItemAPI(callParm playListItemCall) *youtube.PlaylistItemListResponse {
@@ -120,13 +134,18 @@ func resetNotification()  {
 
 func savedVideos(video []Video, playListId string) {
 	cfg := GetConfig()
+
 	for i, playlist := range cfg.Playlists {
 		if playlist.PlaylistID == playListId {
 			videoList := playlist.Videos
 			for vi, video := range video {
-				if !videoAlreadySaved(video.Id,i,cfg) {
+				if cfg.ContainsVideo(video.Id,playlist.Title) {
+					fmt.Println("Video is already saved")
 					videoList = append(videoList, video)
 				} else {
+					fmt.Println("Video is NOT saved")
+					fmt.Println(i)
+					fmt.Println(vi)
 					video.NotificationData = NotificationData{
 						cfg.Playlists[i].Videos[vi].NotificationData.NotificationSentforDay,
 						cfg.Playlists[i].Videos[vi].NotificationData.NoMoreNotification,
@@ -167,12 +186,10 @@ func saveToConfig(newPlayList Playlist) {
 
 func getVideosInPlayList(playListId string) []Video {
 	nextPageToken := ""
-
 	defaultNotification := NotificationData{
 		NotificationSentforDay: false,
 		NoMoreNotification:     false,
 	}
-
 	var videoList []Video
 	for {
 		callParm := playListItemCall{id: playListId, part: "contentDetails,snippet", nextToken: nextPageToken}
