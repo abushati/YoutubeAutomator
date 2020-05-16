@@ -138,18 +138,12 @@ func savedVideos(video []Video, playListId string) {
 	for i, playlist := range cfg.Playlists {
 		if playlist.PlaylistID == playListId {
 			videoList := playlist.Videos
-			for vi, video := range video {
+			for _, video := range video {
 				if cfg.ContainsVideo(video.Id,playlist.Title) {
 					fmt.Println("Video is already saved")
-					videoList = append(videoList, video)
+					continue
+					//videoList = append(videoList, video)
 				} else {
-					fmt.Println("Video is NOT saved")
-					fmt.Println(i)
-					fmt.Println(vi)
-					video.NotificationData = NotificationData{
-						cfg.Playlists[i].Videos[vi].NotificationData.NotificationSentforDay,
-						cfg.Playlists[i].Videos[vi].NotificationData.NoMoreNotification,
-					}
 					videoList = append(videoList, video)
 				}
 			}

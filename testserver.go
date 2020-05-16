@@ -3,7 +3,6 @@ package main
 import (
 	"./PlayListSync"
 	"fmt"
-	"log"
 	"net/http"
 	"strings"
 )
@@ -11,7 +10,6 @@ import (
 func markVideoWatched(videoID string)  {
 	PlayListSync.MarkVideoWatched(videoID)
 }
-
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("here")
@@ -27,5 +25,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	//Portal 8081/tcp is allowed in ufw 
 	http.HandleFunc("/video/", handler)
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	http.ListenAndServe(":8081", nil)
 }

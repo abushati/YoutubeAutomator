@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="66bbb74f-de50-41ef-bd25-d3552ff25ffb" name="Droplet" url="http://157.245.13.186">
+        <fileTransfer rootFolder="/root/YoutubeAutomator" accessType="SFTP" host="157.245.13.186" port="22" sshConfigId="42e8984a-a86b-4e69-b5d4-b04c92cf7b3d" sshConfig="root@157.245.13.186:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
