@@ -146,4 +146,5 @@ func NN() {
 			}
 		}
 	}
+	PlayListSync.ResetNotification()
 }

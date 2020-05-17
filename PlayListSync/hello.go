@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"google.golang.org/api/youtube/v3"
 	"io/ioutil"
-	"time"
 )
 
 var config_file string = "PlayListSync/saved_playlist"
@@ -118,7 +117,7 @@ func MarkVideoWatched(videoID string)  {
 	SaveConfig(cfg)
 }
 
-func resetNotification()  {
+func ResetNotification()  {
 	cfg := GetConfig()
 	for pindex, playlist := range cfg.Playlists{
 		for vindex, _ := range playlist.Videos{
@@ -240,9 +239,12 @@ func RunSync() {
 		}
 
 	}
+	/*
 	hour,_,_ :=time.Now().Clock()
 	fmt.Println(hour)
 	if hour >= 22 && hour <=  24{
 		resetNotification()
+
 	}
+	*/
 }

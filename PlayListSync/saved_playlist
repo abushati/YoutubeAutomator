@@ -10,7 +10,7 @@
                     "Url": "https://i.ytimg.com/vi/5tA-aqhz_Ig/hqdefault.jpg",
                     "NotificationData": {
                         "NotificationSentforDay": false,
-                        "NoMoreNotification": false
+                        "NoMoreNotification": true
                     }
                 },
                 {
@@ -19,7 +19,7 @@
                     "Url": "https://i.ytimg.com/vi/UVq_u2r2tow/hqdefault.jpg",
                     "NotificationData": {
                         "NotificationSentforDay": false,
-                        "NoMoreNotification": false
+                        "NoMoreNotification": true
                     }
                 },
                 {
@@ -100,7 +100,16 @@
                     "Url": "https://i.ytimg.com/vi/mxhbzR4TJmw/hqdefault.jpg",
                     "NotificationData": {
                         "NotificationSentforDay": false,
-                        "NoMoreNotification": false
+                        "NoMoreNotification": true
+                    }
+                },
+                {
+                    "Id": "6avJHaC3C2U",
+                    "Title": "",
+                    "Url": "https://i.ytimg.com/vi/6avJHaC3C2U/hqdefault.jpg",
+                    "NotificationData": {
+                        "NotificationSentforDay": false,
+                        "NoMoreNotification": true
                     }
                 }
             ]
